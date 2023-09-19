@@ -1,0 +1,22 @@
+@use '../Abstract/index' as *;
+
+
+:root {
+
+    // root pour les couleurs
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    // root pour la taille de la police en fonction de la taille de l'ecran
+    @each $screen-size, $font-size in $type-sizes {
+        @if $screen-size == small {
+            @each $size, $value in $font-size {
+                --fs-#{$size}: #{$value};
+            }
+        }
+        
+    }
+}

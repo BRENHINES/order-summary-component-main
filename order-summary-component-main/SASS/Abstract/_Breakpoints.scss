@@ -1,0 +1,14 @@
+// Use map to initialise the breakpoint points
+$breakpoints: (
+    mobile: 375px,
+    desktop: 1440px
+);
+
+// Mixin for Media-queries
+@mixin mq($key) {
+    $size: map-get($map: $breakpoints, $key: $key);
+
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
