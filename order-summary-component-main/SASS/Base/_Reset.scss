@@ -45,10 +45,18 @@ video {
 
 body {
     height: 100vh;
-    background-color: aqua;
+    background: var(--clr-primary-pale-blue);
 }
 
 main {
     width: 100%;
     overflow: hidden;
+    background: top url("/order-summary-component-main/images/pattern-background-mobile.svg") no-repeat;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }

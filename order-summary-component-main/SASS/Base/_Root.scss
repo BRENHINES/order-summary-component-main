@@ -12,11 +12,17 @@
 
     // root pour la taille de la police en fonction de la taille de l'ecran
     @each $screen-size, $font-size in $type-sizes {
-        @if $screen-size == small {
+        @if $screen-size == mobile {
             @each $size, $value in $font-size {
                 --fs-#{$size}: #{$value};
             }
         }
         
+    }
+
+    @each $spacing, $shades in $spacing {
+        @each $shade, $value in $shades {
+            --spc-#{$spacing}-#{$shade}: #{$value};
+        }
     }
 }

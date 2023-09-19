@@ -48,12 +48,20 @@ video {
 
 body {
   height: 100vh;
-  background-color: aqua;
+  background: var(--clr-primary-pale-blue);
 }
 
 main {
   width: 100%;
   overflow: hidden;
+  background: top url("/order-summary-component-main/images/pattern-background-mobile.svg") no-repeat;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 :root {
@@ -62,6 +70,9 @@ main {
   --clr-neutral-very-pale-blue: hsl(225, 100%, 98%);
   --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
   --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+  --spc-margin-25: 25px;
+  --spc-border-10: 10px;
+  --spc-border-17: 17px;
 }
 
 h1,
@@ -81,4 +92,102 @@ h2,
 
 .suptitle {
   font-size: clamp(65px, 2vw, 96px);
+}
+
+.Card {
+  width: 278px;
+  height: 484px;
+  background-color: white;
+  border-radius: var(--spc-border-17);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Card__image {
+  height: 137px;
+  border-radius: 17px;
+}
+.Card__image img {
+  border-radius: 17px 17px 0px 0px;
+}
+.Card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Card__Title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 23px;
+  color: var(--clr-neutral-dark-blue);
+}
+.Card__Description {
+  text-align: center;
+  width: 200px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: var(--spc-margin-25);
+  color: var(--clr-neutral-desaturated-blue);
+}
+.Card__Price {
+  width: 235px;
+  height: 70px;
+  background-color: var(--clr-neutral-very-pale-blue);
+  border-radius: var(--spc-border-10);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spc-margin-25);
+}
+.Card__Price--icon {
+  width: 41px;
+  height: 41px;
+}
+.Card__Price--content {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+}
+.Card__Price--content span {
+  font-size: 12px;
+  color: var(--clr-neutral-dark-blue);
+  font-weight: 900;
+}
+.Card__Price--content p {
+  font-size: 12px;
+  color: var(--clr-neutral-desaturated-blue);
+}
+.Card__Price--CTA {
+  font-size: 12px;
+  color: var(--clr-primary-bright-blue);
+  text-decoration: underline;
+  font-weight: 700;
+}
+.Card__PriceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+.Card__Btn--Payment {
+  height: 42px;
+  width: 238px;
+  background-color: var(--clr-primary-bright-blue);
+  border-radius: var(--spc-border-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spc-margin-25);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+.Card__Btn--Cancel {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--clr-neutral-desaturated-blue);
 }/*# sourceMappingURL=style.css.map */
