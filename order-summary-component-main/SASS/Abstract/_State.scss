@@ -1,0 +1,25 @@
+.Card {
+    &__Price--CTA {
+        &:hover {
+            text-decoration: none;
+            color: #5E56C1;
+            cursor: pointer;
+        }
+    }
+
+    &__Btn {
+        &--Payment {
+            &:hover {
+                background-color: #5E56C1;
+                cursor: pointer;
+            }
+        }
+
+        &--Cancel {
+            &:hover {
+                color: var(--clr-neutral-dark-blue);
+                cursor: pointer;
+            } 
+        }
+    }
+}

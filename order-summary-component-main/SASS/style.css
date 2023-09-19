@@ -1,3 +1,17 @@
+.Card__Price--CTA:hover {
+  text-decoration: none;
+  color: #5E56C1;
+  cursor: pointer;
+}
+.Card__Btn--Payment:hover {
+  background-color: #5E56C1;
+  cursor: pointer;
+}
+.Card__Btn--Cancel:hover {
+  color: var(--clr-neutral-dark-blue);
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "Red Hat Display";
   src: url("/order-summary-component-main/Red-Hat-Display/redhatdisplay/RedHatDisplay-Regular.ttf");
@@ -55,6 +69,13 @@ main {
   width: 100%;
   overflow: hidden;
   background: top url("/order-summary-component-main/images/pattern-background-mobile.svg") no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    background: top url("/order-summary-component-main/images/pattern-background-desktop.svg") no-repeat;
+    background-size: contain;
+  }
 }
 
 section {
@@ -94,84 +115,6 @@ h2,
   font-size: clamp(65px, 2vw, 96px);
 }
 
-.Card {
-  width: 278px;
-  height: 484px;
-  background-color: white;
-  border-radius: var(--spc-border-17);
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-.Card__image {
-  height: 137px;
-  border-radius: 17px;
-}
-.Card__image img {
-  border-radius: 17px 17px 0px 0px;
-}
-.Card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Card__Title {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  margin-bottom: 23px;
-  color: var(--clr-neutral-dark-blue);
-}
-.Card__Description {
-  text-align: center;
-  width: 200px;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Red Hat Display", sans-serif;
-  margin-bottom: var(--spc-margin-25);
-  color: var(--clr-neutral-desaturated-blue);
-}
-.Card__Price {
-  width: 235px;
-  height: 70px;
-  background-color: var(--clr-neutral-very-pale-blue);
-  border-radius: var(--spc-border-10);
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--spc-margin-25);
-}
-.Card__Price--icon {
-  width: 41px;
-  height: 41px;
-}
-.Card__Price--content {
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Red Hat Display", sans-serif;
-}
-.Card__Price--content span {
-  font-size: 12px;
-  color: var(--clr-neutral-dark-blue);
-  font-weight: 900;
-}
-.Card__Price--content p {
-  font-size: 12px;
-  color: var(--clr-neutral-desaturated-blue);
-}
-.Card__Price--CTA {
-  font-size: 12px;
-  color: var(--clr-primary-bright-blue);
-  text-decoration: underline;
-  font-weight: 700;
-}
-.Card__PriceContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 17px;
-}
 .Card__Btn--Payment {
   height: 42px;
   width: 238px;
@@ -190,4 +133,83 @@ h2,
   font-size: 12px;
   font-weight: 900;
   color: var(--clr-neutral-desaturated-blue);
+}
+
+.Card {
+  width: 17.375rem;
+  height: 30.25rem;
+  background-color: white;
+  border-radius: var(--spc-border-17);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.Card__image {
+  height: 8.5625rem;
+  border-radius: 1.0625rem;
+}
+.Card__image img {
+  border-radius: 1.0625rem 1.0625rem 0rem 0rem;
+}
+.Card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Card__Title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1.125rem;
+  margin-bottom: 1.4375rem;
+  color: var(--clr-neutral-dark-blue);
+}
+.Card__Description {
+  text-align: center;
+  width: 12.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: var(--spc-margin-25);
+  color: var(--clr-neutral-desaturated-blue);
+}
+.Card__Price {
+  width: 14.6875rem;
+  height: 4.375rem;
+  background-color: var(--clr-neutral-very-pale-blue);
+  border-radius: var(--spc-border-10);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spc-margin-25);
+}
+.Card__Price--icon {
+  width: 2.5625rem;
+  height: 2.5625rem;
+}
+.Card__Price--content {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+}
+.Card__Price--content span {
+  font-size: 0.75rem;
+  color: var(--clr-neutral-dark-blue);
+  font-weight: 900;
+}
+.Card__Price--content p {
+  font-size: 0.75rem;
+  color: var(--clr-neutral-desaturated-blue);
+}
+.Card__Price--CTA {
+  font-size: 0.75rem;
+  color: var(--clr-primary-bright-blue);
+  text-decoration: underline;
+  font-weight: 700;
+}
+.Card__PriceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
 }/*# sourceMappingURL=style.css.map */
